@@ -1,0 +1,18 @@
+﻿@*Use the list passed in from the action method in the controller as a model to populate the view*@
+@model List<CodingEventsDemo.Models.EventCategory>
+
+    @*An h1 with an appropriate heading for the page*@
+<h1>All Event Categories</h1>
+
+@*A table that will display all of the category names of the event categories stored in our database*@
+<table>
+    <tr>
+    <th>Category Name</th>
+    </tr>
+    @foreach(EventCategory category in Model)
+    {
+        <tr>
+            <td>@category.Name</td>
+        </tr>
+    }
+</table>
